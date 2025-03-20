@@ -1,0 +1,12 @@
+services:
+  app:
+    image: moshzillaradio/moshcast
+    restart: always
+    container_name: moshcast
+    ports:
+      - "9080:9080"
+    volumes:
+      - ./config.yaml:/app/config.yaml:ro
+      - ./data.db:/app/data/data.db:rw
+    command: >
+      ash -c "while true; do /app/moshcast; done"

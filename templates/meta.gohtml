@@ -1,0 +1,9 @@
+{
+  "Songs": [{{range $index,$element := . -}}
+    {{if $index}},{{end}}
+	{
+	  "Title": "{{ .Title }}",
+	  "Date": "{{ .Date }}"
+	}{{end}}
+  ]
+}

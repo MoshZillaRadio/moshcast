@@ -1,0 +1,34 @@
+Name: Radio Station
+Admin: admin@localhost
+Location: Internet
+Host: 127.0.0.1
+Socket:
+  Port: 9080
+
+Limits:
+  Clients: 1000
+  Sources: 50
+  SourceIdleTimeOut: 10
+  EmptyBufferIdleTimeOut: 5
+  WriteTimeOut: 10
+
+Auth:
+  DBFile: data/data.db
+
+Paths:
+  Log: /tmp/
+  Web: html/
+  Plugins: plugins/
+
+Logging:
+  LogLevel: 4
+  LogSize: 50000
+  StatInterval: 5
+
+Mounts:
+  - Name: Example
+    Genre: Genre
+    Description: Radio Station
+    BitRate: 128
+    BurstSize: 65535
+    DumpFile:
